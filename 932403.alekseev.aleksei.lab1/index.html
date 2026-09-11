@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О себе 6 вариант</title>
+<style>
+        body {
+            background-color: #2d1b4e;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #1a0b2e;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #9d00ff;
+        }
+
+        header h1 {
+            color: #00ff88;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: 1fr 250px;
+            gap: 20px;
+        }
+
+        section {
+            background-color: #1a0b2e;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #9d00ff;
+        }
+
+        section h2 {
+            color: #00ff88;
+            margin-bottom: 10px;
+        }
+
+        aside {
+            background-color: #1a0b2e;
+            padding: 15px;
+            border: 1px solid #9d00ff;
+        }
+
+        aside h3 {
+            color: #00ff88;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #1a0b2e;
+            border-top: 2px solid #9d00ff;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 10px 0;
+            background-color: #2d1b4e;
+            border: 1px solid #9d00ff;
+            box-sizing: border-box;
+            color: #e0e0e0;
+        }
+
+        form button {
+            background-color: #9d00ff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #00ff88;
+        }
+
+        .skills-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px; /* расстояние между картинкой и текстом */
+        }
+
+        .skills-section img {
+            flex-shrink: 0; /* чтобы картинка не сжималась */
+            border: 2px solid #00ff88;
+        }
+
+        .skills-content {
+            flex-grow: 1; /* контент занимает всё оставшееся место */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Алексеев Алексей Игоревич</h1>
+        <p>Геймер и разработчик игр</p>
+    </header>
+
+    <main>
+        <div>
+            <section class="skills-section">
+                <img src="1682254242_papik-pro-p-stikeri-roflan-vektor-38.jpg" alt="Steam_profile_pic" width="150" height="150">
+                <div class="skills-content">
+                    <h2>Навыки</h2>
+                    <ul>
+                        <li>Логика и алгоритмы</li>
+                        <li>Unity и Unreal Engine</li>
+                        <li>Игровые механики</li>
+                        <li>C# и C++</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Проекты</h2>
+                <ol>
+                    <li>The Witcher 3</li>
+                    <li>Cyberpunk 2077</li>
+                    <li>Hollow Knight</li>
+                    <li>Monster hunter</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Связаться со мной</h2>
+                <form>
+                    <input type="text" name="name" placeholder="Имя" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Сообщение"></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+            </section>
+        </div>
+
+        <aside>
+            <h3>Любимая платформа</h3>
+            <p>ПК (PC)</p>
+            <h3>Жанры</h3>
+            <p>RPG, Action-Adventure</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Алексеев Алексей Игоревич</p>
+    </footer>
+</body>
+</html>
