@@ -31,6 +31,7 @@ HTML-страница «О себе» на тему **«Геймер и разр
 932403.alekseev.aleksei.lab1/
 ├── index.html                              # Главная страница
 ├── 1682254242_papik-pro-p-stikeri...jpg    # Аватар
+└── README.md                               # Этот файл
 ```
 ---
 
