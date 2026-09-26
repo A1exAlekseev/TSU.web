@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О себе 5 вариант</title>
-<style>
+    <style>
+        :root {
+            --bg-main: #2d1b4e;
+            --bg-card: #1a0b2e;
+            --accent: #00ff88;
+            --border-purple: #9d00ff;
+            --text-color: #e0e0e0;
+        }
+
         body {
-            background-color: #2d1b4e;
-            color: #e0e0e0;
+            background-color: var(--bg-main);
+            color: var(--text-color);
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
         }
 
         header {
-            background-color: #1a0b2e;
+            background-color: var(--bg-card);
             padding: 20px;
             text-align: center;
-            border-bottom: 2px solid #9d00ff;
+            border-bottom: 2px solid var(--border-purple);
         }
 
         header h1 {
-            color: #00ff88;
+            color: var(--accent);
         }
 
         main {
@@ -33,55 +41,101 @@
         }
 
         section {
-            background-color: #1a0b2e;
+            background-color: var(--bg-card);
             padding: 15px;
             margin-bottom: 15px;
-            border: 1px solid #9d00ff;
+            border: 1px solid var(--border-purple);
         }
 
         section h2 {
-            color: #00ff88;
+            color: var(--accent);
             margin-bottom: 10px;
         }
 
-        aside {
-            background-color: #1a0b2e;
+        .projects-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .project-card {
+            background-color: var(--bg-main);
+            border: 1px solid var(--border-purple);
             padding: 15px;
-            border: 1px solid #9d00ff;
+            border-radius: 6px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(157, 0, 255, 0.4);
+        }
+
+        .project-card:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 5px rgba(157, 0, 255, 0.2);
+        }
+
+        aside {
+            background-color: var(--bg-card);
+            padding: 15px;
+            border: 1px solid var(--border-purple);
+            box-sizing: border-box;
+            height: auto;
         }
 
         aside h3 {
-            color: #00ff88;
+            color: var(--accent);
         }
 
         footer {
             text-align: center;
             padding: 15px;
-            background-color: #1a0b2e;
-            border-top: 2px solid #9d00ff;
+            background-color: var(--bg-card);
+            border-top: 2px solid var(--border-purple);
+        }
+
+        form label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 4px;
+            font-size: 14px;
+            color: var(--accent);
         }
 
         form input,
         form textarea {
             width: 100%;
             padding: 8px;
-            margin: 5px 0 10px 0;
-            background-color: #2d1b4e;
-            border: 1px solid #9d00ff;
+            margin-bottom: 10px;
+            background-color: var(--bg-main);
+            border: 1px solid var(--border-purple);
             box-sizing: border-box;
-            color: #e0e0e0;
+            color: var(--text-color);
+            user-select: auto;
+        }
+
+        form textarea {
+            padding: 12px;
+            resize: vertical;
         }
 
         form button {
-            background-color: #9d00ff;
+            background-color: var(--border-purple);
             color: white;
             padding: 10px 20px;
             border: none;
             cursor: pointer;
+            margin-top: 10px;
         }
 
         form button:hover {
-            background-color: #00ff88;
+            background-color: var(--accent);
+            color: #000;
         }
 
         .skills-section {
@@ -92,7 +146,7 @@
 
         .skills-section img {
             flex-shrink: 0;
-            border: 2px solid #00ff88;
+            border: 2px solid var(--accent);
         }
 
         .skills-content {
@@ -107,9 +161,9 @@
     </header>
 
     <main>
-        <div>
+        <article>
             <section class="skills-section">
-                <img src="1682254242_papik-pro-p-stikeri-roflan-vektor-38.jpg" alt="Steam_profile_pic" width="150" height="150">
+                <img src="Pictures/profilepic.jpg" alt="Steam_profile_pic" width="150" height="150">
                 <div class="skills-content">
                     <h2>Навыки</h2>
                     <ul>
@@ -123,24 +177,30 @@
 
             <section>
                 <h2>Проекты</h2>
-                <ol>
-                    <li>The Witcher 3</li>
-                    <li>Cyberpunk 2077</li>
-                    <li>Hollow Knight</li>
-                    <li>Monster hunter</li>
-                </ol>
+                <ul class="projects-list">
+                    <li class="project-card">The Witcher 3</li>
+                    <li class="project-card">Cyberpunk 2077</li>
+                    <li class="project-card">Hollow Knight</li>
+                    <li class="project-card">Monster Hunter</li>
+                </ul>
             </section>
 
             <section>
                 <h2>Связаться со мной</h2>
                 <form>
-                    <input type="text" name="name" placeholder="Имя" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <textarea name="message" placeholder="Сообщение"></textarea>
-                    <button type="submit">Отправить</button>
+                    <label for="name-input">Имя:</label>
+                    <input type="text" id="name-input" name="name" placeholder="Имя" required>
+
+                    <label for="email-input">Email:</label>
+                    <input type="email" id="email-input" name="email" placeholder="Email" required>
+
+                    <label for="message-input">Сообщение:</label>
+                    <textarea id="message-input" name="message" placeholder="Сообщение"></textarea>
+
+                    <button type="submit" style="text-transform: uppercase;">Отправить</button>
                 </form>
             </section>
-        </div>
+        </article>
 
         <aside>
             <h3>Любимая платформа</h3>
