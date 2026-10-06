@@ -4,153 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О себе 5 вариант</title>
+    <!-- Подключение внешнего файла стилей -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Во внутреннем стиле остаётся только правило для textarea по заданию -->
     <style>
-        :root {
-            --bg-main: #2d1b4e;
-            --bg-card: #1a0b2e;
-            --accent: #00ff88;
-            --border-purple: #9d00ff;
-            --text-color: #e0e0e0;
-        }
-
-        body {
-            background-color: var(--bg-main);
-            color: var(--text-color);
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-
-        header {
-            background-color: var(--bg-card);
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid var(--border-purple);
-        }
-
-        header h1 {
-            color: var(--accent);
-        }
-
-        main {
-            max-width: 900px;
-            margin: 20px auto;
-            display: grid;
-            grid-template-columns: 1fr 250px;
-            gap: 20px;
-        }
-
-        section {
-            background-color: var(--bg-card);
-            padding: 15px;
-            margin-bottom: 15px;
-            border: 1px solid var(--border-purple);
-        }
-
-        section h2 {
-            color: var(--accent);
-            margin-bottom: 10px;
-        }
-
-        .projects-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .project-card {
-            background-color: var(--bg-main);
-            border: 1px solid var(--border-purple);
-            padding: 15px;
-            border-radius: 6px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            cursor: pointer;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(157, 0, 255, 0.4);
-        }
-
-        .project-card:active {
-            transform: translateY(2px);
-            box-shadow: 0 2px 5px rgba(157, 0, 255, 0.2);
-        }
-
-        aside {
-            background-color: var(--bg-card);
-            padding: 15px;
-            border: 1px solid var(--border-purple);
-            box-sizing: border-box;
-            height: auto;
-        }
-
-        aside h3 {
-            color: var(--accent);
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: var(--bg-card);
-            border-top: 2px solid var(--border-purple);
-        }
-
-        form label {
-            display: block;
-            margin-top: 10px;
-            margin-bottom: 4px;
-            font-size: 14px;
-            color: var(--accent);
-        }
-
-        form input,
-        form textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            background-color: var(--bg-main);
-            border: 1px solid var(--border-purple);
-            box-sizing: border-box;
-            color: var(--text-color);
-            user-select: auto;
-        }
-
-        form textarea {
+        textarea {
             padding: 12px;
             resize: vertical;
-        }
-
-        form button {
-            background-color: var(--border-purple);
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        form button:hover {
-            background-color: var(--accent);
-            color: #000;
-        }
-
-        .skills-section {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-        }
-
-        .skills-section img {
-            flex-shrink: 0;
-            border: 2px solid var(--accent);
-        }
-
-        .skills-content {
-            flex-grow: 1;
         }
     </style>
 </head>
@@ -178,10 +39,22 @@
             <section>
                 <h2>Проекты</h2>
                 <ul class="projects-list">
-                    <li class="project-card">The Witcher 3</li>
-                    <li class="project-card">Cyberpunk 2077</li>
-                    <li class="project-card">Hollow Knight</li>
-                    <li class="project-card">Monster Hunter</li>
+                    <li class="project-card">
+                        The Witcher 3
+                        <span class="project-badge">TOP</span>
+                    </li>
+                    <li class="project-card">
+                        Cyberpunk 2077
+                        <span class="project-badge">RPG</span>
+                    </li>
+                    <li class="project-card">
+                        Hollow Knight
+                        <span class="project-badge">2D</span>
+                    </li>
+                    <li class="project-card">
+                        Monster Hunter
+                        <span class="project-badge">CO-OP</span>
+                    </li>
                 </ul>
             </section>
 
@@ -197,7 +70,7 @@
                     <label for="message-input">Сообщение:</label>
                     <textarea id="message-input" name="message" placeholder="Сообщение"></textarea>
 
-                    <button type="submit" style="text-transform: uppercase;">Отправить</button>
+                    <button type="submit">Отправить</button>
                 </form>
             </section>
         </article>

@@ -1,0 +1,196 @@
+:root {
+    --bg-main: #2d1b4e;
+    --bg-card: #1a0b2e;
+    --accent: #00ff88;
+    --border-purple: #9d00ff;
+    --text-color: #e0e0e0;
+    --font-main: Arial, sans-serif;
+    --color-white: #ffffff;
+    --color-black: #000000;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    /* 1. Позиционирование: static */
+    position: static; /* Статическое позиционирование элементов по умолчанию в потоке документа */
+    background-color: var(--bg-card);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--border-purple);
+}
+
+header h1 {
+    color: var(--accent);
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 20px;
+}
+
+section {
+    background-color: var(--bg-card);
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-purple);
+}
+
+section h2 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-card {
+    /* 2. Позиционирование: relative */
+    position: relative; /* Относительное позиционирование карточки служит ориентиром для дочернего абсолютного элемента */
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-purple);
+    padding: 20px 15px 15px 15px;
+    border-radius: 6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+/* 3. Позиционирование: absolute */
+.project-badge {
+    position: absolute; /* Абсолютное позиционирование бейджа относительно родитеской карточки .project-card */
+    top: 6px;
+    right: 6px;
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--color-black);
+    background-color: var(--accent);
+    padding: 2px 5px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(157, 0, 255, 0.4);
+}
+
+.project-card:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 5px rgba(157, 0, 255, 0.2);
+}
+
+aside {
+    background-color: var(--bg-card);
+    padding: 15px;
+    border: 1px solid var(--border-purple);
+    box-sizing: border-box;
+    height: auto;
+}
+
+aside h3 {
+    color: var(--accent);
+}
+
+/* Стилизация ссылок и псевдокласса :visited */
+a:link {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--border-purple); /* Задан стиль для посещенных ссылок */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--bg-card);
+    border-top: 2px solid var(--border-purple);
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: var(--accent);
+}
+
+/* Общие свойства для полей ввода без дублирования padding */
+form input,
+form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-purple);
+    box-sizing: border-box;
+    color: var(--text-color);
+    user-select: auto;
+}
+
+form input {
+    padding: 8px;
+}
+
+/* Состояния :focus для элементов формы */
+form input:focus,
+form textarea:focus,
+form button:focus {
+    outline: 2px solid var(--accent);
+    box-shadow: 0 0 8px var(--accent);
+}
+
+form button {
+    background-color: var(--border-purple);
+    color: var(--color-white);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+form button:hover {
+    background-color: var(--accent);
+    color: var(--color-black);
+}
+
+/* Добавлено состояние :active для кнопки */
+form button:active {
+    transform: translateY(2px); /* Эффект вдавливания при нажатии */
+}
+
+.skills-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.skills-section img {
+    flex-shrink: 0;
+    border: 2px solid var(--accent);
+}
+
+.skills-content {
+    flex-grow: 1;
+}
