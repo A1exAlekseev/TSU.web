@@ -19,7 +19,7 @@ body {
 
 header {
     /* 1. Позиционирование: static */
-    position: static; /* Статическое позиционирование элементов по умолчанию в потоке документа */
+    position: static; /* Статическое позиционирование элементов по умолчанию */
     background-color: var(--bg-card);
     padding: 20px;
     text-align: center;
@@ -61,7 +61,7 @@ section h2 {
 
 .project-card {
     /* 2. Позиционирование: relative */
-    position: relative; /* Относительное позиционирование карточки служит ориентиром для дочернего абсолютного элемента */
+    position: relative; /* Относительное позиционирование карточки в роли ориентира для дочернего абсолютного элемента */
     background-color: var(--bg-main);
     border: 1px solid var(--border-purple);
     padding: 20px 15px 15px 15px;
