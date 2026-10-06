@@ -3,7 +3,6 @@
     --bg-card: #1a0b2e;
     --accent: #00ff88;
     --border-purple: #9d00ff;
-    --text-color: #e0e0e0;
     --font-main: Arial, sans-serif;
     --color-white: #ffffff;
     --color-black: #000000;
@@ -11,7 +10,7 @@
 
 body {
     background-color: var(--bg-main);
-    color: var(--text-color);
+    color: var(--color-white);
     font-family: var(--font-main);
     margin: 0;
     padding: 20px;
@@ -143,7 +142,7 @@ form textarea {
     background-color: var(--bg-main);
     border: 1px solid var(--border-purple);
     box-sizing: border-box;
-    color: var(--text-color);
+    color: var(--color-white);
     user-select: auto;
 }
 
