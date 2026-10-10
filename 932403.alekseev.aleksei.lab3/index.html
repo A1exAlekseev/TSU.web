@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О себе 5 вариант</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        textarea {
+            padding: 12px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Алексеев Алексей Игоревич</h1>
+        <p>Геймер и разработчик игр</p>
+        
+        <!-- Navbar -->
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#genres">Жанры</a></li>
+                <li><a href="#dashboard">Статистика</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-content">
+            <section class="skills-section" id="skills">
+                <img src="Pictures/profilepic.jpg" alt="Steam_profile_pic" width="150" height="150">
+                <div class="skills-content">
+                    <h2>Навыки</h2>
+                    <ul>
+                        <li>Логика и алгоритмы</li>
+                        <li>Unity и Unreal Engine</li>
+                        <li>Игровые механики</li>
+                        <li>C# и C++</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!--  Flexx-cards -->
+            <section id="genres" class="genres-section">
+                <h2>Любимые жанры игр</h2>
+                <div class="genres-container">
+                    <article class="genre-card">
+                        <div class="genre-icon">⚔️</div>
+                        <h3>RPG</h3>
+                        <p>Глубокий сюжет, прокачка персонажей, ветвистые диалоги и исследование открытых миров.</p>
+                    </article>
+
+                    <article class="genre-card">
+                        <div class="genre-icon">🏹</div>
+                        <h3>Action-Adventure</h3>
+                        <p>Динамичные сражения, пространственные головоломки, акробатика и захватывающий нарратив.</p>
+                    </article>
+
+                    <article class="genre-card">
+                        <div class="genre-icon">🗺️</div>
+                        <h3>Metroidvania</h3>
+                        <p>Исследование лабиринтов с постепенным открытием способностей и возвратом в ранее недоступные зоны.</p>
+                    </article>
+
+                    <article class="genre-card">
+                        <div class="genre-icon">🛡️</div>
+                        <h3>Co-op Survival</h3>
+                        <p>Командное взаимодействие, сбор ресурсов, крафт и выживание в суровых игровых условиях.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Grid dashboard -->
+            <section id="dashboard" class="dashboard-section">
+                <h2>Статистика игрового времени</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-value">1200+</span>
+                        <span class="stat-label">Часов в RPG</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">350+</span>
+                        <span class="stat-label">Побед в шутерах</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">850+</span>
+                        <span class="stat-label">Пройденных квестов</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Проекты</h2>
+                <ul class="projects-list">
+                    <li class="project-card">
+                        The Witcher 3
+                        <span class="project-badge">TOP</span>
+                    </li>
+                    <li class="project-card">
+                        Cyberpunk 2077
+                        <span class="project-badge">RPG</span>
+                    </li>
+                    <li class="project-card">
+                        Hollow Knight
+                        <span class="project-badge">2D</span>
+                    </li>
+                    <li class="project-card">
+                        Monster Hunter
+                        <span class="project-badge">CO-OP</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="contact">
+                <h2>Связаться со мной</h2>
+                <form>
+                    <label for="name-input">Имя:</label>
+                    <input type="text" id="name-input" name="name" placeholder="Имя" required>
+
+                    <label for="email-input">Email:</label>
+                    <input type="email" id="email-input" name="email" placeholder="Email" required>
+
+                    <label for="message-input">Сообщение:</label>
+                    <textarea id="message-input" name="message" placeholder="Сообщение"></textarea>
+
+                    <button type="submit">Отправить</button>
+                </form>
+            </section>
+        </div>
+
+        <aside>
+            <h3>Любимая платформа</h3>
+            <p>ПК (PC)</p>
+            <h3>Жанры</h3>
+            <p>RPG, Action-Adventure</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Алексеев Алексей Игоревич</p>
+    </footer>
+</body>
+</html>
