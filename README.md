@@ -12,16 +12,16 @@
 
 Основные цвета вынесены в CSS-переменные:
 
-| Переменная         | Цвет      | Назначение                        |
-|--------------------|-----------|-----------------------------------|
-| `--bg-main`        | `#2d1b4e` | Основной фон                      |
-| `--bg-card`        | `#1a0b2e` | Фон блоков                        |
-| `--border-purple`  | `#9d00ff` | Рамки и акценты                   |
-| `--accent`         | `#00ff88` | Заголовки, бейджи, hover-эффекты  |
-| `--link-visited`   | `#d899ff` | Цвет посещённых ссылок            |
-| `--font-main`      | Arial     | Основной шрифт                    |
-| `--color-white`    | `#ffffff` | Цвет текста                       |
-| `--color-black`    | `#000000` | Текст на бейджах                  |
+| Переменная | Значение / HEX-код | Назначение |
+|------------|-------------------|------------|
+| `--bg-main` | ![#2d1b4e](https://dummyimage.com/10/2d1b4e/white?text=+) #2d1b4e | Фон страницы, карточек и полей ввода |
+| `--bg-card` | ![#1a0b2e](https://dummyimage.com/10/1a0b2e/white?text=+) #1a0b2e | Фон основных блоков (`header`, `section`, `aside`, `footer`) |
+| `--border-purple` | ![#9d00ff](https://dummyimage.com/10/9d00ff/white?text=+) #9d00ff | Пурпурный неон для рамок, акцентов и кнопок |
+| `--accent` | ![#00ff88](https://dummyimage.com/10/00ff88/white?text=+) #00ff88 | Ярко-зелёный неон для заголовков, бейджей и hover-эффектов |
+| `--font-main` | `Arial, sans-serif` | Семейство шрифтов страницы |
+| `--color-white` | ![#ffffff](https://dummyimage.com/10/ffffff/white?text=+) #ffffff | Основной цвет текста|
+| `--color-black` | ![#000000](https://dummyimage.com/10/000000/white?text=+) #000000 | Чёрный цвет текста бейджей и кнопки при наведении |
+
 
 ---
 
