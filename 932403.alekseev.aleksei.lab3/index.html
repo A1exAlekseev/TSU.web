@@ -13,9 +13,10 @@
         }
     </style>
 </head>
-<body>
+<body class="theme-dark">
     <header>
         <h1>Алексеев Алексей Игоревич</h1>
+        <button id="theme-toggle" type="button">Переключить тему</button>
         <p>Геймер и разработчик игр</p>
         
         <nav class="main-nav">
@@ -111,6 +112,16 @@
                         <span class="project-badge">CO-OP</span>
                     </li>
                 </ul>
+            </section>
+
+            <section id="games-section">
+                <h2>Любимые игры</h2>
+                <div class="games-controls">
+                    <button id="add-game" type="button">Добавить игру</button>
+                    <button id="delete-last" type="button">Удалить последнюю</button>
+                    <button id="toggle-games" type="button">Скрыть игры</button>
+                </div>
+                <div id="games-container" class="games-container"></div>
             </section>
 
             <section id="contact">
